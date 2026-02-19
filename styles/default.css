@@ -1,4 +1,21 @@
 /* =========================
+   Root Variables
+   ========================= */
+
+:root {
+    --bg-page: #f2f2f2;
+    --bg-white: #ffffff;
+    --bg-light: #fafafa;
+    --bg-nav: #e6e6e6;
+    --bg-hover: #d9d9d9;
+
+    --text-main: #333;
+
+    --border-light: #ddd;
+    --border-medium: #ccc;
+}
+
+/* =========================
    Global Styles
    ========================= */
 
@@ -9,8 +26,8 @@
 body {
     margin: 0;
     font-family: "Times New Roman", Georgia, serif;
-    background-color: #f2f2f2; /* light gray */
-    color: #333;
+    background-color: var(--bg-page);
+    color: var(--text-main);
     line-height: 1.6;
 }
 
@@ -19,40 +36,28 @@ body {
    ========================= */
 
 header {
-    background-color: #ffffff;
+    background-color: var(--bg-white);
     padding: 2rem;
     text-align: center;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid var(--border-light);
 }
 
 /* =========================
-   Navigation Tabs
+   Navigation
    ========================= */
 
 nav {
-    background-color: #e6e6e6;
-    border-bottom: 1px solid #ccc;
-}
-
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-}
-
-nav li {
-    margin: 0;
+    background-color: var(--bg-nav);
+    border-bottom: 1px solid var(--border-medium);
 }
 
 nav a {
-    display: block;
+    display: inline-block;
     padding: 1rem 1.5rem;
     text-decoration: none;
-    color: #333;
-    border-right: 1px solid #ccc;
+    color: var(--text-main);
     font-weight: bold;
+    border-right: 1px solid var(--border-medium);
 }
 
 nav a:last-child {
@@ -60,7 +65,7 @@ nav a:last-child {
 }
 
 nav a:hover {
-    background-color: #ffffff;
+    background-color: var(--bg-white);
 }
 
 /* =========================
@@ -71,8 +76,8 @@ main {
     max-width: 1000px;
     margin: 2rem auto;
     padding: 2rem;
-    background-color: #ffffff;
-    border: 1px solid #ddd;
+    background-color: var(--bg-white);
+    border: 1px solid var(--border-light);
 }
 
 section {
@@ -82,12 +87,12 @@ section {
 article {
     padding: 1rem;
     margin-bottom: 1.5rem;
-    background-color: #fafafa;
-    border: 1px solid #ddd;
+    background-color: var(--bg-light);
+    border: 1px solid var(--border-light);
 }
 
 /* =========================
-   Forms (Contact Page)
+   Forms
    ========================= */
 
 form {
@@ -103,21 +108,21 @@ textarea {
     width: 100%;
     padding: 0.5rem;
     margin-top: 0.25rem;
-    border: 1px solid #ccc;
+    border: 1px solid var(--border-medium);
     font-family: inherit;
 }
 
 button {
     margin-top: 1rem;
     padding: 0.6rem 1.2rem;
-    background-color: #e6e6e6;
-    border: 1px solid #ccc;
+    background-color: var(--bg-nav);
+    border: 1px solid var(--border-medium);
     font-family: inherit;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #d9d9d9;
+    background-color: var(--bg-hover);
 }
 
 /* =========================
@@ -127,7 +132,7 @@ button:hover {
 footer {
     text-align: center;
     padding: 1rem;
-    background-color: #e6e6e6;
-    border-top: 1px solid #ccc;
+    background-color: var(--bg-nav);
+    border-top: 1px solid var(--border-medium);
     font-size: 0.9rem;
 }
